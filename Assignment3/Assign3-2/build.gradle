@@ -1,0 +1,39 @@
+// set as java application
+apply plugin: 'application'
+ def host = 'localhost'
+ def port = 8888
+
+
+//define main class
+mainClassName = 'Concentration'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.json', name: 'json', version: '20200518'
+}
+
+task runClient(type: JavaExec) {
+  group 'gui'
+  description 'Displays a GUI for a game of concentration'
+
+  classpath = sourceSets.main.runtimeClasspath
+
+  main = 'Assign32starter.ClientGui'
+  standardInput = System.in
+  args "1"
+  args port
+  args host
+}
+
+task runServer(type: JavaExec) {
+  group 'gui'
+  description 'Displays a GUI for a game of concentration'
+
+  classpath = sourceSets.main.runtimeClasspath
+
+  main = 'Assign32starter.SockServer'
+  args port
+}
