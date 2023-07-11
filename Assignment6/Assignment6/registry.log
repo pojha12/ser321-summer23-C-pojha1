@@ -1,0 +1,6 @@
+Jul 10, 2023 11:25:42 PM registry.Logging logging
+INFO: New service registered: test localhost:8000
+Jul 10, 2023 11:30:35 PM registry.Logging logging
+INFO: New service registered: test localhost:8000
+Jul 11, 2023 12:12:42 AM registry.Logging logging
+INFO: New service registered: test localhost:8000
